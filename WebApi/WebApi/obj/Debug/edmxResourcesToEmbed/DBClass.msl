@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nodewebapiModelStoreContainer" CdmEntityContainer="nodewebapiEntities1">
+    <EntitySetMapping Name="Details">
+      <EntityTypeMapping TypeName="nodewebapiModel.Detail">
+        <MappingFragment StoreEntitySet="Details">
+          <ScalarProperty Name="record_Id" ColumnName="record-Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TeamMember" ColumnName="TeamMember" />
+          <ScalarProperty Name="ScrumMaster" ColumnName="ScrumMaster" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrumMasters">
+      <EntityTypeMapping TypeName="nodewebapiModel.ScrumMaster">
+        <MappingFragment StoreEntitySet="ScrumMaster">
+          <ScalarProperty Name="Scrum_master" ColumnName="Scrum master" />
+          <ScalarProperty Name="C_Team_member" ColumnName="[Team member" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="C_record_Id" ColumnName="[record-Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

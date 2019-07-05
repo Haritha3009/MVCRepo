@@ -1,0 +1,17 @@
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\CUSTOMMODELS.dll.config
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\CUSTOMMODELS.dll
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\CUSTOMMODELS.pdb
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\AutoMapper.dll
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\EntityFramework.dll
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\System.ValueTuple.dll
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\AutoMapper.pdb
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\AutoMapper.xml
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\EntityFramework.xml
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\bin\Debug\System.ValueTuple.xml
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\obj\Debug\CUSTOMMODELS.csproj.CoreCompileInputs.cache
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\obj\Debug\CUSTOMMODELS.csproj.CopyComplete
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\obj\Debug\CUSTOMMODELS.dll
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\obj\Debug\CUSTOMMODELS.pdb
+C:\Users\haritha.b\Desktop\TasksAT\AMTask\CUSTOMMODELS\obj\Debug\CUSTOMMODELS.csprojAssemblyReference.cache

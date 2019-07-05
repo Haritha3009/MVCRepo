@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mvcModel1StoreContainer" CdmEntityContainer="mvcEntities1">
+    <EntitySetMapping Name="sas">
+      <EntityTypeMapping TypeName="mvcModel1.sa">
+        <MappingFragment StoreEntitySet="sa">
+          <ScalarProperty Name="nm" ColumnName="nm" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

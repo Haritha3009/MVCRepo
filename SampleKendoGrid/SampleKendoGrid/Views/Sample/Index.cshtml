@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Details</h2>
+
+@model SampleKendoGrid.Models.ModelClass
+@using Kendo.Mvc.UI
+@{
+    ViewBag.Title = "Details";
+}
+<head>
+    <base href="https://demos.telerik.com/kendo-ui/datasource/index">
+    <style>
+        html {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title></title>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.web.min.js"></script>
+    <script src=" https://kendo.cdn.telerik.com/2019.1.220/js/kendo.aspnetmvc.min.js"></script>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.mobile.min.css" />
+
+
+</head>
+
+
+<h2>Details</h2>
+@(Html.Kendo().Grid<SampleKendoGrid.Models.ModelClass>()
+                    .Name("grid")
+                    .Columns(columns =>
+                    {
+                        columns.Bound(c => c.Id);
+
+                        columns.Bound(c => c.Name);
+                        columns.Bound(c => c.City);
+
+                    })
+                    .HtmlAttributes(new { style = "height: 550px;" })
+                    .Scrollable()
+                    .Groupable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(true)
+                        .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("Details", "Sample"))
+                        .PageSize(20)
+                    )
+)
+

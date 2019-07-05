@@ -1,0 +1,77 @@
+﻿@model SampleKendoGrid.Models.ModelClass
+
+@{
+    ViewBag.Title = "Editing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Kendo.Mvc.UI
+<h2>Editing</h2>
+<head>
+    <base href="https://demos.telerik.com/kendo-ui/datasource/index">
+    <style>
+        html {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title></title>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.web.min.js"></script>
+    <script src=" https://kendo.cdn.telerik.com/2019.1.220/js/kendo.aspnetmvc.min.js"></script>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.mobile.min.css" />
+
+
+</head>
+  @(Html.Kendo().Grid<SampleKendoGrid.Models.ModelClass>()
+                    .Name("Grid")
+                    .Columns(columns =>
+                    {
+                        columns.Bound(p => p.Id);
+                        columns.Bound(p => p.Name);
+                        columns.Bound(p => p.City);
+
+                        columns.Command(command => command.Destroy()).Width(150);
+                    })
+                    .ToolBar(toolbar =>
+                    {
+                        toolbar.Create();
+                        toolbar.Save();
+                    })
+                    
+        .Editable(editable => editable.Mode(GridEditMode.InCell))
+        .Pageable()
+        .Navigatable()
+        .Sortable()
+        .Scrollable()
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Batch(true)
+            .PageSize(20)
+            .ServerOperation(false)
+            .Events(events => events.Error("error_handler"))
+            .Model(model => model.Id(p => p.Id))
+            .Create("Editing_Create", "EditOperations")
+            .Read("Read", "EditOperations")
+            .Update("Editing_Update", "EditOperations")
+            .Destroy("Editing_Destroy", "EditOperations")
+        )
+)
+<script type="text/javascript">
+    function error_handler(e) {
+        if (e.errors) {
+            var message = "Errors:\n";
+            $.each(e.errors, function (key, value) {
+                if ('errors' in value) {
+                    $.each(value.errors, function () {
+                        message += this + "\n";
+                    });
+                }
+            });
+            alert(message);
+        }
+    }
+</script>

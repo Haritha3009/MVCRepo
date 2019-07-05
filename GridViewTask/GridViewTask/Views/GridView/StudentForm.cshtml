@@ -1,0 +1,58 @@
+﻿@model GridViewTask.Models.StudentForm
+@{
+    ViewBag.Title = "StudentForm";
+}
+
+<h2>StudentForm</h2>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<form method="post" action="StudentForm">
+
+    @Html.ValidationSummary(true,"", new { @class = "text-danger" })
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.StudentId)
+        @Html.EditorFor(model => model.StudentId, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.StudentId,"", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Name,"", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Gender)
+        : Male
+        @Html.RadioButton("Gender", "Male")
+        Female
+        @Html.RadioButton("Gender", "Male")
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.City)
+
+        @Html.DropDownListFor(m=>m.City, (IEnumerable
+              <SelectListItem>)ViewData["Cities"])
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ScholarshipApplicable)
+        @Html.CheckBoxFor(m => m.ScholarshipApplicable, true)
+    </div>
+    <input type="submit" value="Create" class="btn btn-primary" />
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+

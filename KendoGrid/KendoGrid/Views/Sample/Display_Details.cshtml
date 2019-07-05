@@ -1,0 +1,43 @@
+﻿@model KendoGrid.Models.ModelClass
+@using Kendo.Mvc.UI
+@{
+    ViewBag.Title = "Display_Details";
+}
+<script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.web.min.js"></script>
+<script src=" https://kendo.cdn.telerik.com/2019.1.220/js/kendo.aspnetmvc.min.js"></script>
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.mobile.min.css" />
+
+<h2>Display_Details</h2>
+@(Html.Kendo().Grid<KendoGrid.Models.ModelClass>()
+                                            .Name("grid")
+                                            .Columns(columns =>
+                                            {
+                                                columns.Bound(c => c.Id);
+
+                                                columns.Bound(c => c.Name);
+                                                columns.Bound(c => c.City);
+
+                                            })
+                                            .HtmlAttributes(new { style = "height: 550px;" })
+                                            .Scrollable()
+                                            .Groupable()
+                                            .Sortable()
+                                            .Pageable(pageable => pageable
+                                                .Refresh(true)
+                                                .PageSizes(true)
+                                                .ButtonCount(5))
+                                            .DataSource(dataSource => dataSource
+                                                .Ajax()
+
+
+                                                .Read(read => read.Action("Display_Details", "Sample"))
+                                                .PageSize(20).
+                                                ServerOperation(true)
+                                            )
+)
+
+

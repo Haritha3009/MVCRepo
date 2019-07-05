@@ -1,0 +1,15 @@
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\obj\Debug\WCFSERVICE.csprojAssemblyReference.cache
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\obj\Debug\WCFSERVICE.csproj.CoreCompileInputs.cache
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\WCFSERVICE.dll.config
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\WCFSERVICE.dll
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\WCFSERVICE.pdb
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\CustomModel.dll
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\DAL.dll
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\EntityFramework.dll
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\CustomModel.pdb
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\DAL.pdb
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\DAL.dll.config
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\bin\EntityFramework.xml
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\obj\Debug\WCFSERVICE.csproj.CopyComplete
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\obj\Debug\WCFSERVICE.dll
+C:\Users\haritha.b\Desktop\WCF WEBAPI\REGLOGINMVC\WCFSERVICE\obj\Debug\WCFSERVICE.pdb

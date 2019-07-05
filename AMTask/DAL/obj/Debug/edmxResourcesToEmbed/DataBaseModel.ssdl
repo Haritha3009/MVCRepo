@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mvc2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="dbo_t_User_PersonalDetails">
+    <Key>
+      <PropertyRef Name="UserPersonalId" />
+    </Key>
+    <Property Name="UserPersonalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="bit" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="LastUpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="dbo_t_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_t_User_PersonalDetails_dbo_t_Users">
+    <End Role="dbo_t_Users" Type="Self.dbo_t_Users" Multiplicity="1" />
+    <End Role="dbo_t_User_PersonalDetails" Type="Self.dbo_t_User_PersonalDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dbo_t_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="dbo_t_User_PersonalDetails">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mvc2ModelStoreContainer">
+    <EntitySet Name="dbo_t_User_PersonalDetails" EntityType="Self.dbo_t_User_PersonalDetails" Schema="dbo" Table="dbo.t_User_PersonalDetails" store:Type="Tables" />
+    <EntitySet Name="dbo_t_Users" EntityType="Self.dbo_t_Users" Schema="dbo" Table="dbo.t_Users" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_t_User_PersonalDetails_dbo_t_Users" Association="Self.FK_dbo_t_User_PersonalDetails_dbo_t_Users">
+      <End Role="dbo_t_Users" EntitySet="dbo_t_Users" />
+      <End Role="dbo_t_User_PersonalDetails" EntitySet="dbo_t_User_PersonalDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

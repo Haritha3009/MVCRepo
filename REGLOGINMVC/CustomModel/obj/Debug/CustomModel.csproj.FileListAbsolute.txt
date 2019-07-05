@@ -1,0 +1,6 @@
+C:\Users\haritha.b\Desktop\TasksAT\REGLOGINMVC\CustomModel\bin\Debug\CustomModel.dll
+C:\Users\haritha.b\Desktop\TasksAT\REGLOGINMVC\CustomModel\bin\Debug\CustomModel.pdb
+C:\Users\haritha.b\Desktop\TasksAT\REGLOGINMVC\CustomModel\obj\Debug\CustomModel.csproj.CoreCompileInputs.cache
+C:\Users\haritha.b\Desktop\TasksAT\REGLOGINMVC\CustomModel\obj\Debug\CustomModel.dll
+C:\Users\haritha.b\Desktop\TasksAT\REGLOGINMVC\CustomModel\obj\Debug\CustomModel.pdb
+C:\Users\haritha.b\Desktop\TasksAT\REGLOGINMVC\CustomModel\obj\Debug\CustomModel.csprojAssemblyReference.cache

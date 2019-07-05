@@ -1,0 +1,15 @@
+﻿@model IEnumerable<AuthenticationNAuthorization.Models.Registration>
+
+@{
+    ViewBag.Title = "Open";
+}
+
+<h2>Open</h2>
+@foreach (var m in Model)
+{
+    @Html.DisplayFor(nm => m.UserName)
+    @Html.DisplayFor(nm => m.Pwd)
+    @Html.DisplayFor(nm => m.Cpwd)
+    @Html.DisplayFor(nm=>m.Email)
+    @Html.DisplayFor(nm=>m.PhoneNumber)
+}

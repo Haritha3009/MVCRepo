@@ -1,0 +1,6 @@
+C:\Users\haritha.b\Desktop\TasksAT\WebApi\CustomClass\bin\Debug\CustomClass.dll
+C:\Users\haritha.b\Desktop\TasksAT\WebApi\CustomClass\bin\Debug\CustomClass.pdb
+C:\Users\haritha.b\Desktop\TasksAT\WebApi\CustomClass\obj\Debug\CustomClass.csproj.CoreCompileInputs.cache
+C:\Users\haritha.b\Desktop\TasksAT\WebApi\CustomClass\obj\Debug\CustomClass.dll
+C:\Users\haritha.b\Desktop\TasksAT\WebApi\CustomClass\obj\Debug\CustomClass.pdb
+C:\Users\haritha.b\Desktop\TasksAT\WebApi\CustomClass\obj\Debug\CustomClass.csprojAssemblyReference.cache

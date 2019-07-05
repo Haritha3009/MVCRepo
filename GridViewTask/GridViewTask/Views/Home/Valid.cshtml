@@ -1,0 +1,21 @@
+﻿@model GridViewTask.Models.Class1
+
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "Valid";
+}
+@*<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+<h2>Valid</h2>
+<form method="post" action="Valid">
+    <div class="form-group">
+        @Html.LabelFor(model => model.Id)
+        @Html.TextBoxFor(model => model.Id, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Id)
+    </div>
+    <input type="submit" value="Add" class="btn btn-primary" />
+</form>

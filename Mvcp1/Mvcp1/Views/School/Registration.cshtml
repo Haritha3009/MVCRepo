@@ -1,0 +1,14 @@
+﻿@model Mvcp1.Models.Registration
+
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registration</h2>
+@using (Html.BeginForm())
+{
+@Html.LabelFor(m=>m.userName)
+   @Html.TextBoxFor(m => m.userName,{ new()})
+}
+

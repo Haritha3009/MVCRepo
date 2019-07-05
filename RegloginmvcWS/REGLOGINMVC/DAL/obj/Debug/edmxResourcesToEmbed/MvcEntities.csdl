@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mvcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="t_User_PersonalDetails">
+    <Key>
+      <PropertyRef Name="UserPersonalId__UserPersonalId__UserPersonalId" />
+    </Key>
+    <Property Name="UserPersonalId__UserPersonalId__UserPersonalId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="Boolean" Nullable="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="t_Users" Relationship="Self.FK_t_User_PersonalDetails_t_Users" FromRole="t_User_PersonalDetails" ToRole="t_Users" />
+  </EntityType>
+  <EntityType Name="t_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="t_User_PersonalDetails" Relationship="Self.FK_t_User_PersonalDetails_t_Users" FromRole="t_Users" ToRole="t_User_PersonalDetails" />
+  </EntityType>
+  <Association Name="FK_t_User_PersonalDetails_t_Users">
+    <End Role="t_Users" Type="Self.t_Users" Multiplicity="1" />
+    <End Role="t_User_PersonalDetails" Type="Self.t_User_PersonalDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="t_User_PersonalDetails">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mvcEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="t_User_PersonalDetails" EntityType="Self.t_User_PersonalDetails" />
+    <EntitySet Name="t_Users" EntityType="Self.t_Users" />
+    <AssociationSet Name="FK_t_User_PersonalDetails_t_Users" Association="Self.FK_t_User_PersonalDetails_t_Users">
+      <End Role="t_Users" EntitySet="t_Users" />
+      <End Role="t_User_PersonalDetails" EntitySet="t_User_PersonalDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

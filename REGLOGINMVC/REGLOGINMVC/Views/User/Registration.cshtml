@@ -1,0 +1,67 @@
+﻿@model REGLOGINMVC.Models.ViewModel
+
+@{
+    /**/
+
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Registration", "User", FormMethod.Post))
+{
+    @*<form class="form-horizontal">*@
+
+    <div class="form-group">
+        @Html.Label("EMail")
+        @Html.EditorFor(model => model.user.EMail, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.user.EMail, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+            @Html.LabelFor(model => model.user.Password)
+            @Html.EditorFor(model => model.user.Password, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.user.Password, "", new { @class = "text-danger" })
+        </div>
+    <div class="form-group">
+        @Html.Label("First Name")
+
+        @Html.EditorFor(model => model.userPersonal.FName, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.userPersonal.FName, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.userPersonal.LName)
+        @Html.EditorFor(model => model.userPersonal.LName, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.userPersonal.LName, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.userPersonal.Phone)
+        @Html.EditorFor(model => model.userPersonal.Phone, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.userPersonal.Phone, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.userPersonal.Gender)
+        Male:
+        @Html.RadioButtonFor(model => model.userPersonal.Gender, false)
+        Female:
+        @Html.RadioButtonFor(model => model.userPersonal.Gender, true)
+        @Html.ValidationMessageFor(model => model.userPersonal.Gender, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.userPersonal.DOB)
+        @Html.EditorFor(model => model.userPersonal.DOB, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.userPersonal.DOB, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.userPersonal.Address)
+        @Html.EditorFor(model => model.userPersonal.Address, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.userPersonal.Address, "", new { @class = "text-danger" })
+    </div>
+    <input type="submit" value="signup" class="btn btn-primary" />
+    @ViewBag.message1
+   @ViewBag.message
+    @Html.ActionLink("Login Here","Login")
+}

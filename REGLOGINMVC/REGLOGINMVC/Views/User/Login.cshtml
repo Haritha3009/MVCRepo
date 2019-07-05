@@ -1,0 +1,30 @@
+﻿@model REGLOGINMVC.Models.ViewModel
+
+@{
+                
+
+                ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Login", "User", FormMethod.Post))
+{
+
+
+    <div class="form-group">
+        @Html.Label("EMail")
+        @Html.EditorFor(model => model.user.EMail, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.user.EMail, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.user.Password)
+        @Html.EditorFor(model => model.user.Password, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.user.Password, "", new { @class = "text-danger" })
+    </div>
+    <input type="submit" value="Login" class="btn btn-primary" />
+}
